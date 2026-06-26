@@ -15,6 +15,7 @@ class ContasController extends Controller
         return view('dashboard.contas.index', compact('clientes'));
     }
 
+    // Marcar uma conta como paga (pagamento feito)
     public function update(Request $request, $id)
     {
         // Atualiza a conta a receber vinculada à venda
