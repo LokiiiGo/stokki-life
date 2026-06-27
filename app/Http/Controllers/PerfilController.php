@@ -12,6 +12,7 @@ class PerfilController extends Controller
         return view('dashboard.perfil.edit', compact('user'));
     }
 
+    /* O usuário pode atualizar os credenciais cadastrados */
     public function update(Request $request)
     {
         $user = auth()->user();
@@ -23,6 +24,7 @@ class PerfilController extends Controller
             'avatar' => 'nullable|image|max:2048',
         ]);
 
+        // pode adicionar um foto de perfil (em desenvolvimento)
         if ($request->hasFile('avatar')) {
             $path = $request->file('avatar')->store('avatars', 'public');
             $data['avatar_path'] = $path;
@@ -30,6 +32,7 @@ class PerfilController extends Controller
 
         $user->update($data);
 
+        // Perfil será atualizado
         return redirect()->route('perfil.edit')->with('success', 'Perfil atualizado com sucesso!');
     }
 }
