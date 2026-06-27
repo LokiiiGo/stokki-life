@@ -3,6 +3,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+// database Folder (Pasta) criada
 class Folder extends Model
 {
     protected $fillable = ['nome'];

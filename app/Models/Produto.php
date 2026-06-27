@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+// database Produto criada
 class Produto extends Model
 {
     use HasFactory;
@@ -19,7 +20,7 @@ class Produto extends Model
         'folder_id',
         'data_vencimento',
         'data_consumo',
-        'dias_restantes', // <-- adiciona aqui
+        'dias_restantes',
     ];
 
     public function itensVenda()

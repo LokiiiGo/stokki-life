@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+// database Cliente criada
 class Cliente extends Model
 {
     use HasFactory;
@@ -13,7 +14,6 @@ class Cliente extends Model
     protected $fillable = [
         'nome',
         'numero_cliente',
-        // adicione outros campos que existirem na sua tabela clientes
     ];
 
     public function vendas()
