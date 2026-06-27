@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+// database itemVenda criada
 class ItemVenda extends Model
 {
     use HasFactory;

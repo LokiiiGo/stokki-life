@@ -10,6 +10,7 @@ class Acesso extends Model
 {
     use HasFactory;
 
+    // database Acesso criada
     protected $fillable = [
         'tipo',        // entrada ou saída
         'produto_id',
