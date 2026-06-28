@@ -8,6 +8,7 @@
     </a>
 </div>
 
+<!-- Aparecerá todos os produtos que foram vendidos -->
 <h2 class="text-3xl font-bold text-stokki-green-dark mb-2">Vendas Registradas</h2>
 <p class="text-stokki-gray-text mb-6">Aqui estão todas as vendas registradas no sistema.</p>
 

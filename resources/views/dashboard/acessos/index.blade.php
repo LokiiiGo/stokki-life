@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,26 +22,40 @@
         }
     </script>
     <style>
-        .fade-in { animation: fadeIn 0.5s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
     </style>
     <link rel="icon" type="image/jpeg" href="{{ asset('images/icon.png') }}">
 </head>
+
 <body class="bg-stokki-gray-light font-sans antialiased">
     <main class="max-w-4xl mx-auto px-4 py-8 fade-in">
-        
+
         {{-- Botão de voltar ao Dashboard --}}
         <div class="mb-6">
-            <a href="{{ route('dashboard') }}" 
-               class="inline-flex items-center gap-2 text-stokki-green hover:text-stokki-green-dark font-medium">
+            <a href="{{ route('dashboard') }}"
+                class="inline-flex items-center gap-2 text-stokki-green hover:text-stokki-green-dark font-medium">
                 <i data-lucide="arrow-left" class="w-5 h-5"></i>
                 Voltar ao Dashboard
             </a>
         </div>
 
+        <!-- O usuário poderá visualizar todo o hístorico de produtos que foram vendidos e os que estão em venda de estoque -->
         <h2 class="text-3xl font-bold text-stokki-green-dark mb-2">Histórico de Acessos</h2>
         <p class="text-stokki-gray-text mb-6">Visualize os produtos que entraram no estoque e os que foram vendidos.</p>
 
+        <!-- Uma tabela que mostrará todos os acessos (vendas e entradas) -->
         <section>
             <div class="bg-white rounded-lg shadow overflow-hidden">
                 <table class="min-w-full divide-y divide-stokki-gray-border">
@@ -78,4 +93,5 @@
 
     <script>lucide.createIcons();</script>
 </body>
+
 </html>

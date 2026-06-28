@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,12 +34,16 @@
     </style>
     <link rel="icon" type="image/jpeg" href="{{ asset('images/icon.png') }}">
 </head>
+
 <body class="bg-stokki-gray-light font-sans antialiased">
     <div class="flex items-center justify-center min-h-screen register-gradient">
         <div class="w-full max-w-sm p-8 space-y-6 bg-white rounded-xl shadow-2xl">
+
+            <!-- título com a logo do stokki-life -->
             <div class="text-center">
                 <div class="flex justify-center mb-6">
-                    <img src="{{ asset('images/LogoStokkiLife.png') }}" alt="Logo Stokki-Life" class="h-40 w-40 rounded-full object-cover">
+                    <img src="{{ asset('images/LogoStokkiLife.png') }}" alt="Logo Stokki-Life"
+                        class="h-40 w-40 rounded-full object-cover">
                 </div>
                 <p class="mt-2 text-stokki-gray-text">Gestão para uma vida saudável.</p>
             </div>
@@ -47,42 +52,59 @@
                 @include('components.toast')
             @endif
 
+            <!-- formulário para criar uma conta -->
             <form method="POST" action="{{ route('register.store') }}" class="space-y-4">
                 @csrf
 
+                <!-- Nome -->
                 <div>
                     <label class="text-sm font-medium text-stokki-gray-text block mb-1">Nome</label>
-                    <input type="text" name="name" class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green" required>
+                    <input type="text" name="name"
+                        class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green"
+                        required>
                 </div>
 
+                <!--Sobrenome -->
                 <div>
                     <label class="text-sm font-medium text-stokki-gray-text block mb-1">Sobrenome</label>
-                    <input type="text" name="sobrenome" class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green">
+                    <input type="text" name="sobrenome"
+                        class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green">
                 </div>
 
+
+                <!-- Telefone -->
                 <div>
                     <label class="text-sm font-medium text-stokki-gray-text block mb-1">Telefone</label>
-                    <input type="tel" name="telefone" class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green">
+                    <input type="tel" name="telefone"
+                        class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green">
                 </div>
 
+                <!-- Email -->
                 <div>
                     <label class="text-sm font-medium text-stokki-gray-text block mb-1">Email</label>
-                    <input type="email" name="email" class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green" required>
+                    <input type="email" name="email"
+                        class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green"
+                        required>
                 </div>
 
+                <!-- Senha -->
                 <div>
                     <label class="text-sm font-medium text-stokki-gray-text block mb-1">Senha</label>
-                    <input type="password" name="password" class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green" required>
+                    <input type="password" name="password"
+                        class="w-full px-4 py-2 bg-gray-50 border rounded-md focus:ring-2 focus:ring-stokki-green"
+                        required>
                 </div>
 
                 <div>
-                    <button type="submit" class="w-full flex justify-center items-center gap-2 px-4 py-3 font-bold text-white bg-stokki-green rounded-md hover:bg-stokki-green-dark transition-transform transform hover:scale-105 shadow-md">
+                    <button type="submit"
+                        class="w-full flex justify-center items-center gap-2 px-4 py-3 font-bold text-white bg-stokki-green rounded-md hover:bg-stokki-green-dark transition-transform transform hover:scale-105 shadow-md">
                         <i data-lucide="user-plus" class="w-5 h-5"></i>
                         Criar conta
                     </button>
                 </div>
             </form>
 
+            <!-- Caso o usuário já tenha uma conta -->
             <div class="text-center text-sm mt-6">
                 <p class="text-stokki-gray-text">
                     Já tem conta?
@@ -94,4 +116,5 @@
 
     <script>lucide.createIcons();</script>
 </body>
+
 </html>
